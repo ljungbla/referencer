@@ -1,0 +1,89 @@
+.session-settings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    >.session-time {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+        > div {
+            display: flex;
+            margin-left: 0.5rem;
+        }
+
+        &.notactive {
+            opacity: 0.4;
+        }
+
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.5rem;
+            margin-bottom: 0;
+            text-align: center;
+            padding-left:1rem;
+            padding-right: 1rem;
+        }
+
+        [type="radio"]:checked + label {
+            color: #fff;
+        }
+        [type="radio"]:not(:checked) + label {
+            color: #fff;
+        }
+
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            border: 2px solid var(--primaryColor);
+            border-radius: 1rem;
+            background: transparent;
+            z-index: -1;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: "";
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background:  var(--primaryColor);
+            position: absolute;
+            border-radius: 1rem;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            z-index: -1;
+        }
+
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}

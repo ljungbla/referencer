@@ -1,0 +1,38 @@
+.seen {
+    max-width: 1080px;
+    margin:0 auto;
+    margin-top:1rem;
+    
+    > div {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+        > img {
+            width:auto;
+            height: 300px;
+            margin:0.5rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+    }
+
+    .lightbox {
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        z-index: 10000;
+        > img {
+            height: 90vh;
+            width:auto;
+            margin: auto auto;
+        }
+    }
+}

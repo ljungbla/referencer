@@ -1,0 +1,20 @@
+
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.session-setup {
+  margin-top:60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding:2rem;
+  border-radius: 2rem;
+  background-color:rgba(4, 2, 21, 0.6);
+  box-shadow:inset 1px 1px 2px 0px #525879;
+  max-width: 500px;
+}
